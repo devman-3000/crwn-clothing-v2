@@ -1,14 +1,6 @@
-import { Routes, Route, Outlet } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
-
-const Navigation = () => {
-  return (
-    <>
-      <div>Navigation Bar</div>
-      <Outlet/>  
-    </>
-  );
-};
+import Navigation from './pages/Navigation';
 
 const Shop = () => {
   return (
