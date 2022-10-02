@@ -1,5 +1,14 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Outlet } from 'react-router-dom';
 import Home from './pages/Home';
+
+const Navigation = () => {
+  return (
+    <>
+      <div>Navigation Bar</div>
+      <Outlet/>  
+    </>
+  );
+};
 
 const Shop = () => {
   return (
@@ -10,7 +19,8 @@ const Shop = () => {
 const App = () => {
   return (
   <Routes>
-    <Route path='/home' exact element={<Home />}>
+    <Route path='/' element={<Navigation />}>
+      <Route index element={<Home />} />
       <Route path='shop' element={<Shop />} />  
     </Route>
   </Routes>
